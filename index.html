@@ -4,13 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brignol Massoterapia</title>
+    <title>Robson Reinoso Massoterapia</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS (versão CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Fonte personalizada Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+
+    <!------------------------------->
+    <!--     HEADER COM OVERLAY    -->
+    <!------------------------------->
+
     <div id="overlay" class="overlay"></div>
     <header>
         <div class="logo"><span>R</span>obson Reinoso</div>
@@ -27,51 +37,28 @@
             </button>
         </div>
     </header>
+
+
+    <!------------------------------->
+    <!--   NAV SIDEBAR INTERATIVA  -->
+    <!------------------------------->
+
     <nav id="sidebar" class="sidebar">
         <button id="close-sidebar" class="close-btn">&times;</button>
         <ul class="nav-links">
             <li><a href="#home">Início</a></li>
-            <li><a href="#galeria">Galeria de Coloridos</a></li>
-            <li><a href="#cursos">Produtos & Cursos</a></li>
-            <li><a href="#about-me">Blog & sobre mim</a></li>
-            <li><a href="#clube_das_amoras">Clube das amoras</a></li>
+            <li><a href="#massagens">Massagens</a></li>
+            <li><a href="#sobre">Sobre</a></li>
             <li><a href="#contato">Contatos</a></li>
-            <!-- <?php if (!isset($_SESSION['usuario'])): ?> -->
-
             <li class="login-item">
-                <a href="login.php">
-                    <i class="fas fa-user"></i> Login
-                </a>
+                <a href="#">Login</a>
             </li>
-
-            <li class="cadastro-item">
-                <a href="formulario_cadastro.php">
-                    <i class="fa-solid fa-address-card"></i> Cadastro
-                </a>
-            </li>
-
-            <!-- <?php else: ?> -->
-
-            <li class="login-item">
-                <a href="#">
-                    <i class="fas fa-user"></i> <!--<?= $_SESSION['usuario']; ?>-->
-                </a>
-            </li>
-
-            <li>
-                <a href="logout.php">
-                    <i class="fas fa-sign-out-alt"></i> Sair
-                </a>
-            </li>
-
-            <!-- <?php endif; ?> -->
-
         </ul>
     </nav>
 
-
-
-
+    <!------------------------------->
+    <!-- BANNER MAIN PARA MASSAGEM -->
+    <!------------------------------->
 
     <section class="hero">
         <div class="hero-text">
@@ -88,48 +75,72 @@
     </section>
 
 
+    <!------------------------------->
+    <!--   CARROSSEL MELHORADO     -->
+    <!------------------------------->
 
-
-
-    <section class="section">
+    <section class="section" id="massagens">
         <div class="section-inner">
-            <h2>Nossas <span>massagens</span></h2>
+            <h2>Nossas <span>Massagens</span></h2>
             <div class="accent-bar"></div>
 
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
+                        <!-- Slide 1 -->
                         <li class="glide__slide">
-                            <div class="card">
-                                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874"
-                                    alt="Massagem Relaxante" loading="eager">
-                                <h3>Massagem Relaxante</h3>
+                            <div class="carousel-card">
+                                <div class="card-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&h=400&fit=crop"
+                                        alt="Massagem Relaxante" class="card-image" loading="lazy">
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Massagem Relaxante</h3>
+                                    <p class="card-description">Alívio total de tensões com técnicas suaves e relaxantes
+                                    </p>
+                                </div>
                             </div>
                         </li>
 
+                        <!-- Slide 2 -->
                         <li class="glide__slide">
-                            <div class="card">
-                                <img src="https://images.unsplash.com/photo-1556228724-4e0e1e7b1f5d"
-                                    alt="Massagem Terapêutica" loading="eager">
-                                <h3>Massagem Terapêutica</h3>
+                            <div class="carousel-card">
+                                <div class="card-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=400&fit=crop"
+                                        alt="Massagem Terapêutica" class="card-image" loading="lazy">
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Massagem Terapêutica</h3>
+                                    <p class="card-description">Tratamento profissional para dores e desconfortos
+                                        musculares</p>
+                                </div>
                             </div>
                         </li>
 
+                        <!-- Slide 3 -->
                         <li class="glide__slide">
-                            <div class="card">
-                                <img src="https://images.unsplash.com/photo-1598908314732-07113901949e"
-                                    alt="Drenagem Linfática" loading="eager">
-                                <h3>Drenagem Linfática</h3>
+                            <div class="carousel-card">
+                                <div class="card-image-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1598908314732-07113901949e?w=500&h=400&fit=crop"
+                                        alt="Drenagem Linfática" class="card-image" loading="lazy">
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Drenagem Linfática</h3>
+                                    <p class="card-description">Estimulação do sistema linfático para melhor circulação
+                                    </p>
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </div>
 
+                <!-- Navigation Arrows -->
                 <div class="glide__arrows" data-glide-el="controls">
                     <button class="glide__arrow glide__arrow--prev" data-glide-dir="<">&#10094;</button>
                     <button class="glide__arrow glide__arrow--next" data-glide-dir=">">&#10095;</button>
                 </div>
 
+                <!-- Pagination Bullets -->
                 <div class="glide__bullets" data-glide-el="controls[nav]">
                     <button class="glide__bullet" data-glide-dir="=0"></button>
                     <button class="glide__bullet" data-glide-dir="=1"></button>
@@ -139,22 +150,157 @@
         </div>
     </section>
 
-   
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Suas <span>Dores e Desconfortos</span><br>Têm Solução!</h1>
-            <p>Pescoço, Ombros, Costas, Pernas, Má circulação e Inchaço.</p>
-            <p>Há quase 25 anos aplicando técnicas terapêuticas comprovadas para tratar sua saúde física de forma
-                personalizada.</p>
-            <a href="#" class="btn-whatsapp">Marque sua Avaliação</a>
-        </div>
 
-        <div class="hero-img">
-            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874" alt="Massagem">
+    <!------------------------------->
+    <!--   SEÇÃO DE CONTATO        -->
+    <!------------------------------->
+
+    <section class="contato-pro" id="contato">
+        <div class="contato-box">
+            <div class="contato-info">
+                <h2>Agende sua <span>Avaliação</span></h2>
+
+                <p>
+                    Atendimento com quase <strong>25 anos de experiência</strong>.
+                    Clique no botão abaixo e fale direto comigo pelo WhatsApp.
+                </p>
+
+                <ul class="contato-lista">
+                    <li>✔ Atendimento personalizado</li>
+                    <li>✔ Resultados já nas primeiras sessões</li>
+                    <li>✔ Ambiente confortável e seguro</li>
+                </ul>
+
+                <a href="https://wa.me/5599999999999" class="btn-whatsapp-grande">
+                    Marcar Avaliação Agora
+                </a>
+            </div>
+
+            <div class="contato-img">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef" alt="Massagem">
+            </div>
         </div>
     </section>
 
+    <section class="faq">
+
+        <div class="title">
+            <p>Perguntas frequentes</p>
+            <span></span>
+        </div>
+
+        <div class="box-question">
+            <div class="question">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dignissimos ut alias, saepe voluptatem reiciendis maxime, deleniti labore fugit quae enim odit dolores esse cum eaque beatae? Quibusdam, libero voluptatem! <?xml version="1.0" encoding="UTF-8"?>
+                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Iconly/Two-tone/Arrow - Down 2</title>
+                    <g id="Iconly/Two-tone/Arrow---Down-2" stroke="none" stroke-width="1" fill="none"
+                        fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Arrow---Down-2" transform="translate(5.000000, 8.500000)" stroke="#000000"
+                            stroke-width="1.5">
+                            <polyline id="Stroke-1" points="14 0 7 7 0 0"></polyline>
+                        </g>
+                    </g>
+                </svg></p>
+                
+            </div>
+                        <div class="question">
+                <p>sajdsdJASDAJSAJSDS <?xml version="1.0" encoding="UTF-8"?>
+                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Iconly/Two-tone/Arrow - Down 2</title>
+                    <g id="Iconly/Two-tone/Arrow---Down-2" stroke="none" stroke-width="1" fill="none"
+                        fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Arrow---Down-2" transform="translate(5.000000, 8.500000)" stroke="#000000"
+                            stroke-width="1.5">
+                            <polyline id="Stroke-1" points="14 0 7 7 0 0"></polyline>
+                        </g>
+                    </g>
+                </svg></p>
+               
+            </div>
+                        <div class="question">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dignissimos ut alias, saepe voluptatem reiciendis maxime, deleniti labore fugit quae enim odit dolores esse cum eaque beatae? Quibusdam, libero voluptatem!</p>
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Iconly/Two-tone/Arrow - Down 2</title>
+                    <g id="Iconly/Two-tone/Arrow---Down-2" stroke="none" stroke-width="1" fill="none"
+                        fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Arrow---Down-2" transform="translate(5.000000, 8.500000)" stroke="#000000"
+                            stroke-width="1.5">
+                            <polyline id="Stroke-1" points="14 0 7 7 0 0"></polyline>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+                        <div class="question">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dignissimos ut alias, saepe voluptatem reiciendis maxime, deleniti labore fugit quae enim odit dolores esse cum eaque beatae? Quibusdam, libero voluptatem!</p>
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Iconly/Two-tone/Arrow - Down 2</title>
+                    <g id="Iconly/Two-tone/Arrow---Down-2" stroke="none" stroke-width="1" fill="none"
+                        fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Arrow---Down-2" transform="translate(5.000000, 8.500000)" stroke="#000000"
+                            stroke-width="1.5">
+                            <polyline id="Stroke-1" points="14 0 7 7 0 0"></polyline>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+                        <div class="question">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dignissimos ut alias, saepe voluptatem reiciendis maxime, deleniti labore fugit quae enim odit dolores esse cum eaque beatae? Quibusdam, libero voluptatem!</p>
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Iconly/Two-tone/Arrow - Down 2</title>
+                    <g id="Iconly/Two-tone/Arrow---Down-2" stroke="none" stroke-width="1" fill="none"
+                        fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Arrow---Down-2" transform="translate(5.000000, 8.500000)" stroke="#000000"
+                            stroke-width="1.5">
+                            <polyline id="Stroke-1" points="14 0 7 7 0 0"></polyline>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+                        <div class="question">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dignissimos ut alias, saepe voluptatem reiciendis maxime, deleniti labore fugit quae enim odit dolores esse cum eaque beatae? Quibusdam, libero voluptatem!</p>
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>Iconly/Two-tone/Arrow - Down 2</title>
+                    <g id="Iconly/Two-tone/Arrow---Down-2" stroke="none" stroke-width="1" fill="none"
+                        fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                        <g id="Arrow---Down-2" transform="translate(5.000000, 8.500000)" stroke="#000000"
+                            stroke-width="1.5">
+                            <polyline id="Stroke-1" points="14 0 7 7 0 0"></polyline>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            
+
+
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Glide.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+
+    <!-- Custom Script -->
     <script src="script.js"></script>
 </body>
 
